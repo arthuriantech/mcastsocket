@@ -46,7 +46,7 @@ class MulticastSocket:
         dgram, addr = self.socket.recvfrom(dgramsize)
         return self._loads(dgram), addr
 
-    def sendto(self, data, addr):
+    def sendto(self, addr, data):
         self.socket.sendto(self._dumps(data), addr)
 
     def close(self):
